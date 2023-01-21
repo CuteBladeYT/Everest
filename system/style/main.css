@@ -1,0 +1,37 @@
+@font-face {
+    font-family: comfortaa;
+    src: url(../fonts/comfortaa.ttf);
+} @font-face {
+    font-family: firacode;
+    src: url(../fonts/firacode.ttf);
+} @font-face {
+    font-family: heebo;
+    src: url(../fonts/heebo.ttf);
+} @font-face {
+    font-family: indieflower;
+    src: url(../fonts/indieflower.ttf);
+} @font-face {
+    font-family: ubuntu;
+    src: url(../fonts/ubuntu.ttf);
+} @font-face {
+    font-family: ubuntu_mono;
+    src: url(../fonts/ubuntu_mono.ttf);
+} @font-face {
+    font-family: apex-mk3;
+    src: url(../fonts/apex-mk3.otf);
+}
+
+:root {
+    --font-default: comfortaa;
+    --font-default-mono: firacode;
+    --font-default-handwrite: indieflower;
+    --font-size: 16px;
+}
+
+body {
+    background: black;
+    color: white;
+    font-family: var(--font-default-mono);
+    font-size: var(--font-size);
+    overflow: hidden;
+}

@@ -1,0 +1,9 @@
+{
+    "user": "storage",
+    "documents": "storage/Documents",
+    "downloads": "storage/Downloads",
+    "pictures": "storage/Pictures",
+    "videos": "storage/Videos",
+    "programs": "storage/Programs",
+    "other": "storage/Other"
+}
