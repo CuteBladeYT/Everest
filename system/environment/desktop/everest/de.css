@@ -1,0 +1,46 @@
+#everest_desktop_environment__wallpaper {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: calc(100%);
+    height: calc(100% - [--taskbar-height]);
+    object-fit: [--wallpaper-fit];
+    z-index: 0;
+}
+
+#everest_desktop_environment__taskbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100%);
+    height: [--taskbar-height];
+    background: [--colors--taskbar];
+    z-index: 999999999;
+}
+#everest_desktop_environment__taskbar_meta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: [--taskbar-height];
+    height: [--taskbar-height];
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+#everest_desktop_environment__taskbar_meta:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+#everest_desktop_environment__taskbar_meta:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+#everest_desktop_environment__taskbar_meta > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 4px;
+    padding: 0;
+    object-fit: cover;
+}

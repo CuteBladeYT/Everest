@@ -17,7 +17,10 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      webviewTag: true
+      webviewTag: true,
+      nodeIntegrationInWorker: true,
+      nodeIntegrationInSubFrames: true,
+      plugins: true
     }
   });
 

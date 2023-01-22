@@ -1,0 +1,27 @@
+{
+    "wallpaper": {
+        "source": "storage/Pictures/wallpapers/windows-error.jpg",
+        "fit": "cover",
+        "type": "img"
+    },
+    "taskbar": {
+        "appearance": {
+            "height": "52px"
+        },
+        "meta": {
+            "icon": "system/icon/icon.png"
+        },
+        "shortcuts": []
+    },
+    "status_bar": {
+        "width": 24
+    },
+    "window_manager": {
+        "work_area": {
+            "top": "0",
+            "right": "0",
+            "width": "calc(100% - 24px)",
+            "height": "calc(100% - 52px)"
+        }
+    }
+}
