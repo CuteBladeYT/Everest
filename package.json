@@ -6,7 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": "GITHUB_REPO",
+  "repository": "https://github.com/CuteBladeYT/Everest",
   "author": "UnitedCatdom",
   "license": "DSMS-v1.2",
   "devDependencies": {
