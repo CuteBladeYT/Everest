@@ -1,3 +1,27 @@
 {
-    "taskbar": "#11111b"
+    "taskbar": "#11111b",
+    "panel": {
+        "regular": "#1e1e2e",
+        "dark": "#181825",
+        "darker": "#11111b",
+        "light": "#313244",
+        "lighter": "#45475a"
+    },
+    "text": "#cdd6f4",
+    "names": {
+        "rosewater": "#f5e0dc",
+        "flamingo": "#f2cdcd",
+        "pink": "#f5c2e7",
+        "mauve": "#cba6f7",
+        "red": "#f38ba8",
+        "maroon": "#eba0ac",
+        "peach": "#fab387",
+        "yellow": "#f9e2af",
+        "green": "#a6e3a1",
+        "teal": "#94e2d5",
+        "sky": "#89dceb",
+        "sapphire": "#74c7ec",
+        "blue": "#89b4fa",
+        "lavender": "#b4befe"
+    }
 }

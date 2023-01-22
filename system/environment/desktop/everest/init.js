@@ -39,6 +39,16 @@ function init() {
     for (const variablei in cssvarialbes) {
         let variable = cssvarialbes[variablei];
         for (let i = 0; i < (stylesheet.match(/--/g) || []).length; i++) {
+            if (variable.name.match("colors")) {
+                let var_name_split = variable.name.split("--")[2].replace("]", "").split("-");
+                variable.val = "";
+                let color_var = "colors.";
+                for (let vnsi = 0; vnsi < var_name_split.length; vnsi++) {
+                    color_var += var_name_split[vnsi];
+                    if (var_name_split.length-1 < vnsi) color_var += ".";
+                };
+                variable.val = eval(color_var);
+            };
             stylesheet = stylesheet.replace(variable.name, String(variable.val));
         };
     };
