@@ -27,12 +27,13 @@
     padding: 0;
     background: transparent;
     border: none;
+    transition: background 100ms ease;
 }
 #everest_desktop_environment__taskbar_meta:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
 }
 #everest_desktop_environment__taskbar_meta:active {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
 }
 #everest_desktop_environment__taskbar_meta > img {
     position: absolute;
@@ -43,4 +44,61 @@
     margin: 4px;
     padding: 0;
     object-fit: cover;
+}
+
+#everest_desktop_environment__start_menu {
+    position: absolute;
+    bottom: [--taskbar-height];
+    left: [--status_bar-width];
+    width: 496px;
+    height: calc(100% - ([--taskbar-height] * 2));
+    background: [--colors--panel-regular];
+    border: 3px [--colors--text] solid;
+    z-index: 99999999;
+    transition: opacity 100ms ease;
+}
+
+#everest_desktop_environment__status_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: [--status_bar-width];
+    height: calc(100% - [--taskbar-height]);
+    background: rgba(0, 0, 0, 0.6);
+}
+#everest_desktop_environment__status_bar > div {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: [--status_bar-width];
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    transition: background 100ms ease;
+}
+#everest_desktop_environment__status_bar > div:hover  {
+    background: rgba(255, 255, 255, 0.2);
+}
+#everest_desktop_environment__status_bar > div:active  {
+    background: rgba(255, 255, 255, 0.1);
+}
+#everest_desktop_environment__status_bar > div > button {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: [--status_bar-width];
+    height: [--status_bar-width];
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+#everest_desktop_environment__status_bar > div > button > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    margin: 4px;
 }

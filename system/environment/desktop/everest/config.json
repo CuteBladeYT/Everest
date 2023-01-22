@@ -13,14 +13,15 @@
         },
         "shortcuts": []
     },
+
     "status_bar": {
-        "width": 24
+        "width": "32px"
     },
     "window_manager": {
         "work_area": {
             "top": "0",
             "right": "0",
-            "width": "calc(100% - 24px)",
+            "width": "calc(100% - 32px)",
             "height": "calc(100% - 52px)"
         }
     }
