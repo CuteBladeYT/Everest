@@ -7,11 +7,16 @@
         <script type="module" src="./assets/main.js"></script>
 
         <!-- CSS -->
+        <link rel="stylesheet" href="./assets/style/desktop.css">
         <link rel="stylesheet" href="./assets/desktop/wallpaper/wallpaper.css">
         <link rel="stylesheet" href="./assets/taskbar/taskbar.css">
     </head>
 
     <body style="overflow: hidden;">
+
+        <div id="_loading" style="animation-name: _loading__show;">
+            <img src="./assets/icons/loading.svg" draggable="false">
+        </div>
         
         <div id="desktop">
             <div id="wallpaper">
@@ -27,9 +32,13 @@
             <div id="programs"></div>
 
             <div id="tray">
+                <div id="utils">
+
+                </div>
+
                 <div id="clock">
-                    <span id="time">00:00:00</span>
-                    <span id="date">00.00.0000</span>
+                    <span id="time"></span>
+                    <span id="date"></span>
                 </div>
             </div>
         </div>

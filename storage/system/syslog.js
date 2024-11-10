@@ -31,6 +31,11 @@ export function msg(logText="", logErr=0)
     };
     let txt = parse_log_text(log);
     
+    let ct = Date.now();
+    let td = new Date(ct);
+
+    txt = `${td.getHours()}:${td.getMinutes()}:${td.getSeconds()}\n${txt}`;
+
     switch (log.err)
     {
         case 1:
@@ -46,7 +51,7 @@ export function msg(logText="", logErr=0)
             break;
     };
 
-    logs[Date.now()] = log;
+    logs[ct] = log;
 }
 
 

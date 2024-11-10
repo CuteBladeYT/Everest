@@ -1,3 +1,6 @@
+// Styles
+import * as de_styles from "./desktop/styles.js";
+
 // Taskbar
 import * as taskbar from "./taskbar/taskbar.js";
 
@@ -9,13 +12,27 @@ import * as syslog from "/system/syslog.js";
 
 document.addEventListener("DOMContentLoaded", 
 () => {
-    init();
+    let _loading = document.body.querySelector("div#_loading");
+    init().then(
+        (err) => {
+
+            if (err >= 0)
+                setTimeout(() => {
+                    _loading.style.animationName = "_loading__hide";
+                }, 1000);
+
+        }
+    );
 })
 
-export function init()
+export async function init()
 {
-    
-    de_wallpaper.load();
-    taskbar.init();
+    let err = 0;
+    syslog.msg("Initializing Everest desktop environment");
 
+    err += await de_styles.init();
+    err += await de_wallpaper.load();
+    err += await taskbar.init();
+
+    return err;
 }

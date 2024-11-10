@@ -1,9 +1,15 @@
 // Import config
 import { cfg } from "../../config.js";
 
-export function init()
+// Import time
+import * as Time from "/system/api/time.js";
+
+var tb = document.createElement("div");
+
+export async function init()
 {
-    let tb = document.body.querySelector("#taskbar");
+    tb.remove();
+    tb = document.body.querySelector("#taskbar");
     let conf = cfg.desktop.taskbar;
     let cols = cfg.colors;
 
@@ -12,18 +18,20 @@ export function init()
 
     let vars = [
         "height", 
-        "border_width",
-        "corner_radius",
-        "tray_width",
+        "border-width",
+        "corner-radius",
+        "tray-width",
+        "tray-clock-width",
 
-        "color_background",
-        "color_border"
+        "color-background",
+        "color-border"
     ];
     let vals = [
         conf.height + "px",
         conf.border_width + "px",
         conf.corner_radius + "px",
         conf.tray.width + "px",
+        conf.tray.clock.width + "px",
 
         conf.colors.background,
         cols.accent
@@ -40,4 +48,27 @@ export function init()
     tbstyle.innerText += "}";
 
     document.head.appendChild(tbstyle);
+
+    clock_fn();
+
+    return 0;
+}
+
+var _tb_clock_interval;
+function clock_fn()
+{
+    clearInterval(_tb_clock_interval);
+    let clock = tb.querySelector("#tray > #clock");
+    let c_time = clock.firstElementChild;
+    let c_date = clock.lastElementChild;
+
+    _tb_clock_interval = setInterval(
+    () => {
+        
+        let t = Time.get_current_time(true);
+
+        c_time.textContent = `${t.hour}:${t.minute}${ cfg.desktop.taskbar.tray.clock.show_seconds ? `:${t.second}` : ""}`;
+        c_date.textContent = `${t.day}.${t.month}.${t.year}`;
+
+    }, 999);
 }

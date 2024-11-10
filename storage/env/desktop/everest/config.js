@@ -25,15 +25,26 @@ export var cfg =
 
                 "clock":
                 {
-                    "show_seconds": false
+                    "width": 100,
+                    "show_seconds": true
                 }
             }
         }
     },
 
+    "display":
+    {
+        "font": 
+        {
+            "main": "/env/desktop/everest/assets/style/font/comfortaa.ttf",
+            "mono": "/env/desktop/everest/assets/style/font/kodemono.ttf"
+        }
+    },
+
     "colors":
     {
-        "accent": "#a6e3a1"
+        "accent": "#a6e3a1",
+        "text": "#cdd6f4"
     }
 }
 export const defcfg = Object.create(cfg);
