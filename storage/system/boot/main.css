@@ -22,9 +22,6 @@ body #everest_tty {
   z-index: 1;
 }
 body #env {
-  z-index: 2;
-}
-body #env #desktop, body #env #windowmanager {
   position: fixed;
   top: 0;
   left: 0;
@@ -32,4 +29,29 @@ body #env #desktop, body #env #windowmanager {
   height: 100%;
   margin: 0;
   padding: 0;
+  z-index: 2;
+}
+body #env #desktop, body #env #windowmanager {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body #env #desktop > :first-child, body #env #windowmanager > :first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body #env #windowmanager {
+  pointer-events: none;
+}
+body #env #windowmanager * {
+  pointer-events: auto;
 }

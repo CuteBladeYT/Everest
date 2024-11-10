@@ -58,3 +58,18 @@ export function writeFile(filePath="", fileContent="", encoding="utf-8", check=f
 
     return err;
 }
+
+
+
+// DELETING
+
+// Remove file
+export function removeFile(filePath="", options={force:false,maxRetries:0,recursive:false,retryDelay:100}, includeRoot=true)
+{
+    fs.rmSync((includeRoot?r:"")+filePath, options);
+}
+
+export function removeDir(path="", options={maxRetries:0,retryDelay:100}, includeRoot=true)
+{
+    fs.rmdirSync((includeRoot?r:"")+path, options);
+}

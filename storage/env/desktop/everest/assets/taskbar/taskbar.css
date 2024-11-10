@@ -1,0 +1,53 @@
+#taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--taskbar-height);
+  border-style: solid;
+  border-width: 0;
+  border-top-width: var(--taskbar-border_width);
+  background-color: var(--taskbar-color_background);
+  border-color: var(--taskbar-color_border);
+}
+#taskbar > * {
+  margin: 0;
+  padding: 0;
+}
+#taskbar #launcher {
+  width: var(--taskbar-height);
+  height: var(--taskbar-height);
+  background-color: transparent;
+  border: 0px transparent solid;
+}
+#taskbar #launcher > img {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+#taskbar #launcher:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#taskbar #programs {
+  position: absolute;
+  top: 0;
+  left: var(--taskbar-height);
+  width: calc(100% - var(--taskbar-height) - var(--taskbar-tray_width));
+  height: 100%;
+}
+#taskbar #tray {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--taskbar-tray_width);
+  height: 100%;
+}

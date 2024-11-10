@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <base href="env/desktop/everest/"> -->
         
+        <!-- MAIN SCRIPT -->
+        <script type="module" src="./assets/main.js"></script>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/desktop/wallpaper/wallpaper.css">
+        <link rel="stylesheet" href="./assets/taskbar/taskbar.css">
     </head>
 
-    <body>
+    <body style="overflow: hidden;">
         
         <div id="desktop">
-
+            <div id="wallpaper">
+                <img src="" draggable="false">
+            </div>
         </div>
 
         <div id="taskbar">
-            
+            <button id="launcher">
+                <img src="/system/assets/icon/icon.png" draggable="false">
+            </button>
+
+            <div id="programs"></div>
+
+            <div id="tray">
+                <div id="clock">
+                    <span id="time">00:00:00</span>
+                    <span id="date">00.00.0000</span>
+                </div>
+            </div>
         </div>
 
     </body>

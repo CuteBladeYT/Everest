@@ -45,7 +45,7 @@ export async function load_desktop()
     if (fs.exists(initFilePath))
     {
         let dsktp = await import(initFilePath);
-        if (dsktp["init"])
+        if (typeof(dsktp["init"]) == "function")
         {
             dsktp.init().then(
             (err) => {
