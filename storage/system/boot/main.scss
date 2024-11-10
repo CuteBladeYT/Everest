@@ -1,0 +1,52 @@
+@font-face 
+{
+    font-family: mono;
+    src: url(../assets/fonts/kodemono.ttf);
+}
+
+body 
+{
+    overflow: hidden;
+    width: 100dvw;
+    height: 100dvh;
+
+    background-color: black;
+    color: white;
+
+    font-family: mono;
+}
+
+body 
+{
+    #everest_tty 
+    {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+
+        z-index: 1;
+    }
+
+    #env 
+    {
+        z-index: 2;
+    }
+
+    #env 
+    {
+        #desktop, #windowmanager
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

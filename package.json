@@ -1,0 +1,30 @@
+{
+  "name": "everest",
+  "version": "0.1.1",
+  "description": "A pseudo-operating system",
+  "main": "main.js",
+
+  
+
+  "scripts": 
+  {
+    "start": "electron .",
+    "dev": "electron . --devMode",
+    "nightly": "electron . --nightlyMode"
+  },
+  "repository": "GITHUB_REPO",
+  "author": "UnitedCatdom",
+  "license": "DSMS-v1.2",
+  "devDependencies": 
+  {
+    "electron": "^19.0.8"
+  },
+  "dependencies": 
+  {
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-plugin-import": "^2.31.0",
+    "express": "^4.21.1",
+    "fs": "^0.0.1-security"
+  },
+  "type": "commonjs"
+}
