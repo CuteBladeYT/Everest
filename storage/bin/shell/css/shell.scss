@@ -1,0 +1,147 @@
+@font-face 
+{
+    font-family: mono;
+    src: url(/system/assets/fonts/kodemono.ttf);
+}
+
+:root
+{
+    --color-background:   #000000;
+    --color-foreground:   #cccccc;
+
+    --color-black:        #0c0c0c;
+    --color-blue:         #0037da;
+    --color-cyan:         #3a96dd;
+    --color-green:        #13a10e;
+    --color-purple:       #881798;
+    --color-red:          #c50f1f;
+    --color-white:        #cccccc;
+    --color-yellow:       #c19c00;
+    --color-bright-black: #767676;
+    --color-bright-blue:  #3b78ff;
+    --color-bright-cyan:  #61d6d6;
+    --color-bright-green: #16c69c;
+    --color-bright-purple:#b4009e;
+    --color-bright-red:   #e74856;
+    --color-bright-white: #f2f2f2;
+    --color-bright-yellow:#f9f1a5;
+}
+
+*
+{
+    font-family: mono, monospace;
+    font-size: medium;
+
+    &::selection
+    {
+        background-color: var(--color-bright-black);
+    }
+}
+
+::-webkit-scrollbar 
+{
+    width: 0;
+}
+::-webkit-scrollbar-track
+{
+    background: none;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+
+    width: 100dvw;
+    height: 100dvh;
+}
+
+#shell
+{
+    position: absolute;
+    top:0;
+    left:0;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    min-height: 100%;
+
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+
+    overflow: auto auto;
+
+    span
+    {
+        
+        &.warning 
+        {
+            color: var(--color-yellow);
+        }
+
+        &.error
+        {
+            color: var(--color-red);
+        }
+    }
+}
+
+#history
+{
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+
+    > *
+    {
+        // display: block;
+
+        margin: 0;
+        padding: 0;
+
+        // width: 100%;
+    }
+}
+
+#input
+{
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: flex-start;
+    // align-items: stretch;
+    // align-content: stretch;
+    // gap: 4px;
+
+    color: var(--color-bright-black);
+
+    > #cwd 
+    {
+        color: var(--color-yellow);
+    }
+    > #privileges
+    {
+        color: var(--color-green);
+    }
+    > #commandIn
+    {
+        background: none;
+        border: none;
+        padding: 0;
+        color: var(--color-bright-yellow);
+        outline: none;
+    }
+}

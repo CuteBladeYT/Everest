@@ -4,8 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>everest.shell</title>
+
+        <script type="module" src="./sh/main.js"></script>
+        <link rel="stylesheet" href="./css/shell.css">
     </head>
 
     <body oncontextmenu="return false;">
+        <div id="shell">
+            <div id="history"></div>
+    
+            <div id="input">
+                <span>+---[</span>
+                <span id="cwd">/</span>
+                <span>]</span>
+                <br>
+                <span>|</span> 
+                <span id="privileges">$</span>
+                <input type="text" id="commandIn" value="" autofocus>
+                <br>
+                <div id="completions"></div>
+            </div>
+        </div>
     </body>
 </html>

@@ -19,6 +19,8 @@ import * as econf from "/env/desktop/everest/config.js";
 // Important constants
 const root = `env/desktop/${metadata.pkg}/`; // Desktop Environment's root directory
 
+var env_root = document||null;
+
 const filePaths = // Paths to env files
 {
     "html": root + "desktop.html"
@@ -33,22 +35,14 @@ export async function init()
     if (fs.exists(filePaths.html))
     {
 
-        // let wv = document.createElement("webview");
-        // wv.src = filePaths.html;
-        
-        // dom.get_element(dom.env_desktop).appendChild(wv);
-
         let container = document.createElement("iframe");
         container.style.border = "0";
-        // let container = document.createElement("div");
-        
-        // Read the file's contents
-        // let desktopElement = fs.readFile(filePaths.html);
         
         // And append it to a DOM
-        // container.innerHTML = desktopElement.trim();
         container.src = filePaths.html;
+        
         dom.get_element(dom.env_desktop).appendChild(container);
+        // dom.get_element(dom.env_desktop).appendChild(container);
 
         // econf.load_cfg();
     }

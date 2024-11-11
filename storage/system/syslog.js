@@ -54,12 +54,6 @@ export function msg(logText="", logErr=0)
     logs[ct] = log;
 }
 
-
-
-
-
-
-
 export function clear() {
     logs = {};
     console.clear();

@@ -2,6 +2,12 @@
   font-family: mono;
   src: url(../assets/fonts/kodemono.ttf);
 }
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 body {
   overflow: hidden;
   width: 100dvw;
@@ -30,6 +36,7 @@ body #env {
   margin: 0;
   padding: 0;
   z-index: 2;
+  pointer-events: none;
 }
 body #env #desktop, body #env #windowmanager {
   position: absolute;
@@ -39,6 +46,10 @@ body #env #desktop, body #env #windowmanager {
   height: 100%;
   margin: 0;
   padding: 0;
+  pointer-events: none;
+}
+body #env #desktop *, body #env #windowmanager * {
+  pointer-events: auto;
 }
 body #env #desktop > :first-child, body #env #windowmanager > :first-child {
   position: absolute;
@@ -48,10 +59,4 @@ body #env #desktop > :first-child, body #env #windowmanager > :first-child {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-body #env #windowmanager {
-  pointer-events: none;
-}
-body #env #windowmanager * {
-  pointer-events: auto;
 }

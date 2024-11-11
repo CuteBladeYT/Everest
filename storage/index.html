@@ -6,19 +6,23 @@
 
         <script>window.everest = {};</script>
 
-        <script type="module" src="./system/init/init.js"></script>
-        <link rel="stylesheet" href="./system/boot/main.css">
+        <script type="module" src="/system/init/init.js"></script>
+        <link rel="stylesheet" href="/system/boot/main.css">
+
+        <script>
+
+            
+
+        </script>
     </head>
 
     <body oncontextmenu="return false;">
-        
-        <webview id="everest_tty" src="./bin/shell/index.html" style="display: initial;"></webview>
 
-        <div id="env" style="display: initial;">
+        <iframe id="everest_tty" src="/bin/shell/index.html" frameborder="0">
 
+        <div id="env">
             <div id="desktop"></div>
             <div id="windowmanager"></div>
-
         </div>
         
     </body>

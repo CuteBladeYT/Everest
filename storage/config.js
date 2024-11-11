@@ -68,7 +68,7 @@ export function check_confs()
         {
             let fc = fs.readFile("cfg/" + file);
             
-            if (fc == ""||null||undefined||{})
+            if (fc == null||undefined)
                 err = true;
         }
         else {

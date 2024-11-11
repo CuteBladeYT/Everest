@@ -4,6 +4,11 @@
     src: url(../assets/fonts/kodemono.ttf);
 }
 
+*
+{
+    user-select: none;
+}
+
 body 
 {
     overflow: hidden;
@@ -42,6 +47,8 @@ body
         padding: 0;
         z-index: 2;
 
+        pointer-events: none;
+
         #desktop, #windowmanager
         {
             position: absolute;
@@ -51,6 +58,12 @@ body
             height: 100%;
             margin: 0;
             padding: 0;
+
+            pointer-events: none;
+            *
+            {
+                pointer-events: auto;
+            }
         }
 
         #desktop > :first-child, #windowmanager > :first-child
@@ -62,16 +75,6 @@ body
             height: 100%;
             margin: 0;
             padding: 0;
-        }
-
-        #windowmanager
-        {
-            pointer-events: none;
-
-            *
-            {
-                pointer-events: auto;
-            }
         }
     }
 }

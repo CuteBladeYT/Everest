@@ -22,10 +22,8 @@ export function load_all()
 
 
 // load desktop env
-export async function load_desktop()
+export async function load_desktop(cdsktp)
 {
-    let cdsktp = config.env.desktop;
-
     if (cdsktp == null||undefined||"")
     {
         syslog.msg("No desktop environment is set", 2);
@@ -74,9 +72,8 @@ export async function load_desktop()
 
 
 // load window manager
-export async function load_wm()
+export async function load_wm(cwm)
 {
-    let cwm = config.env.windowManager;
     if (cwm == null||undefined||"")
     {
         syslog.msg("No window manager is set", 2);

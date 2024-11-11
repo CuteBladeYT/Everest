@@ -31,6 +31,23 @@ export function exists(path="", includeRoot=true)
     return fs.existsSync((includeRoot?r:"") + path);
 }
 
+// CHECK IF DIRECTORY
+export function isDir(path="", includeRoot=true)
+{
+    let p = (includeRoot?r:"") + path;
+    if (exists(p, false))
+    {
+
+        // 0 if directory
+        // 1 if file
+        return fs.lstatSync(p).isDirectory() == true ? 0 : 1;
+
+    }
+    else {
+        return -1; // Path doesn't exist
+    }
+}
+
 
 // STORING
 

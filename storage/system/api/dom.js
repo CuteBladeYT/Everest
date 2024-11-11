@@ -5,8 +5,18 @@ export const env = "#env";
 export const env_desktop = `${env} > #desktop`;
 export const env_windowManager = `${env} > #windowmanager`;
 
+var domroot = window.everest.root;
+
+export function _set_domroot(e){domroot=e}
+
 export function get_element(element="")
 {
-    let e = document.body.querySelector(element);
-    return e;
+    console.log(domroot);
+    
+    if (domroot)
+    {
+        let e = domroot.body.querySelector(element);
+        return e;
+    };
+    return -1;
 }
