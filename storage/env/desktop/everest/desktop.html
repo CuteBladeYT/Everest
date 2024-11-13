@@ -6,13 +6,28 @@
         <!-- MAIN SCRIPT -->
         <script type="module" src="./assets/main.js"></script>
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="./assets/icons/fontawesome/css/fontawesome.css">
+        <link rel="stylesheet" href="./assets/icons/fontawesome/css/solid.css">
+
         <!-- CSS -->
         <link rel="stylesheet" href="./assets/style/desktop.css">
         <link rel="stylesheet" href="./assets/desktop/wallpaper/wallpaper.css">
         <link rel="stylesheet" href="./assets/taskbar/taskbar.css">
+        <link rel="stylesheet" href="./assets/launcher/main.css">
     </head>
 
     <body style="overflow: hidden;">
+
+        <div id="e_contextMenu" class="hidden">
+            <button>nigga</button>
+            <button>nigga</button>
+            <button>nigga</button>
+            <button>nigga</button>
+            <button>nigga</button>
+            <button>nigga</button>
+            <button>nigga</button>
+        </div>
 
         <div id="_loading" style="animation-name: _loading__show;">
             <img src="./assets/icons/loading.svg" draggable="false">
@@ -23,7 +38,7 @@
                 <img src="" draggable="false">
             </div>
         </div>
-
+        
         <div id="taskbar">
             <button id="launcher">
                 <img src="/system/assets/icon/icon.png" draggable="false">
@@ -41,6 +56,69 @@
                     <span id="date"></span>
                 </div>
             </div>
+        </div>
+
+        <div id="launcher" class="hidden">
+            <div id="programs">
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+                <p>nigga</p>
+            </div>
+
+            <div id="profile">
+
+                <img src="./assets/icons/user.png" id="user_picture">
+                <span id="username">Username</span>
+
+                <div id="quickstart">
+                    <button class="settings">Settings</button>
+                    <button class="explorer">File explorer</button>
+                    <button class="terminal">Terminal</button>
+
+                    <div id="power">
+                        <button class="fa-solid fa-power-off" id="poweroff"></button>
+                        <button class="fa-solid fa-arrow-rotate-left" id="restart"></button>
+                        <button class="fa-solid fa-arrow-right-from-bracket" id="logout"></button>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </body>

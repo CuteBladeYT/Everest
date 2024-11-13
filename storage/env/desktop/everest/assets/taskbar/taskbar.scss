@@ -1,14 +1,22 @@
 #taskbar 
 {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: calc(var(--taskbar-margin) - 1px);
+    // left: calc(var(--taskbar-margin) - 1px);
+    left: 50%;
+    width: calc((100% - var(--taskbar-margin)*2) - 1px);
     height: var(--taskbar-height);
+    padding: 1px;
+
+    transform: translateX(-50%);
 
     border-style: solid;
     border-width: 0;
-    border-top-width: var(--taskbar-border-width);
+    border-width: var(--taskbar-border-width);
+    border-radius: var(--taskbar-corner-radius);
+    // border-bottom-left-radius: 0;
+    // border-bottom-right-radius: 0;
+    contain: content;
 
     background-color: var(--taskbar-color-background);
     border-color: var(--taskbar-color-border);

@@ -1,0 +1,186 @@
+:root
+{
+    --launcher-profile-width: 128px
+}
+
+
+@keyframes everest_launcher_show {
+    0%
+    {
+        display: unset;
+        opacity: 0;
+    }
+
+    100%
+    {
+        display: unset;
+        opacity: 1;
+    }
+}
+
+@keyframes everest_launcher_hide {
+    0%
+    {
+        display: unset;
+        opacity: 1;
+    }
+
+    99%
+    {
+        display: unset;
+    }
+
+    100%
+    {
+        display: none;
+        opacity: 0;
+    }
+}
+
+
+body > #launcher
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+
+    width: 768px;
+    max-width: 90%;
+    min-width: 20%;
+
+    height: 512px;
+    max-height: 90%;
+    min-height: 20%;
+
+    transform: translate(-50%,-50%);
+
+    background-color: var(--colors-panel-bg);
+    border: 1px var(--colors-accent) solid;
+    border-radius: 10px;
+
+    contain: content;
+
+    overflow: hidden;
+
+    animation-duration: 100ms;
+    animation-fill-mode: forwards;
+    animation-name: everest_launcher_show;
+
+    &.hidden
+    {
+        animation-name: everest_launcher_hide;
+    }
+
+    > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 16px;
+
+        width: calc(100% - var(--launcher-profile-width) - 32px*2);
+        height: calc(100% - 32px);
+
+        // width: 70%;
+        // height: 100%;
+
+        &#programs
+        {
+            background-color: var(--colors-panel-bg-dark);
+            contain: content;
+            overflow: hidden auto;
+        }
+
+        &#profile
+        {
+            left: calc(100% - var(--launcher-profile-width) - 32px);
+            width: calc(var(--launcher-profile-width));
+            overflow: hidden;
+
+
+            > img#user_picture
+            {
+                position: absolute;
+                top: 16px;
+                left: 50%;
+                width: 64px;
+                height: 64px;
+
+                transform: translateX(-50%);
+
+                object-fit: cover;
+            }
+            > span#username
+            {
+                position: absolute;
+                top: calc(16px + 64px + 4px);
+                left: 0;
+                width: 100%;
+                height: 32px;
+
+                text-align: center;
+
+                font-size: large;
+            }
+
+            > #quickstart
+            {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: calc(100% - 16px - 64px - 4px - 32px - 32px);
+
+                display: flex;
+                flex-direction: column;
+                
+                > *
+                {
+                    flex-grow: 2;
+                }
+                button
+                {
+                    background-color: transparent;
+                    border: none;
+                    
+                    cursor: pointer;
+                    
+                    transition: 50ms ease-in-out;
+                    
+                    &:hover
+                    {
+                        background-color: #ffffff33;
+                        color: var(--colors-text-hover);
+                    }
+                }
+                > #power
+                {
+                    display: flex;
+                    flex-direction: row;
+                    flex-grow: 1;
+
+
+                    button
+                    {
+                        flex-grow: 1;
+
+                        &#poweroff
+                        {
+                            color: var(--colors-info-error);
+
+                            &:hover {
+                                color: var(--colors-info-error);
+                            }
+                        }
+                        
+                        &:hover
+                        {
+                            color: var(--colors-accent);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

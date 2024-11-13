@@ -4,50 +4,60 @@ import { cfg } from "../../config.js";
 // Import time
 import * as Time from "/system/api/time.js";
 
+// Launcher
+import * as launcher from "../launcher/main.js";
+
 var tb = document.createElement("div");
 
 export async function init()
 {
     tb.remove();
     tb = document.body.querySelector("#taskbar");
-    let conf = cfg.desktop.taskbar;
-    let cols = cfg.colors;
 
-    let tbstyle = document.createElement("style");
-    tbstyle.innerText = ":root{\n";
+    tb.querySelector("button#launcher").addEventListener(
+        "click",
+        () => {
+            launcher.show();
+        }
+    );
+    // let conf = cfg.desktop.taskbar;
+    // let cols = cfg.colors;
 
-    let vars = [
-        "height", 
-        "border-width",
-        "corner-radius",
-        "tray-width",
-        "tray-clock-width",
+    // let tbstyle = document.createElement("style");
+    // tbstyle.innerText = ":root{\n";
 
-        "color-background",
-        "color-border"
-    ];
-    let vals = [
-        conf.height + "px",
-        conf.border_width + "px",
-        conf.corner_radius + "px",
-        conf.tray.width + "px",
-        conf.tray.clock.width + "px",
+    // let vars = [
+    //     "height", 
+    //     "border-width",
+    //     "corner-radius",
+    //     "tray-width",
+    //     "tray-clock-width",
 
-        conf.colors.background,
-        cols.accent
-    ];
+    //     "color-background",
+    //     "color-border"
+    // ];
+    // let vals = [
+    //     conf.height + "px",
+    //     conf.border_width + "px",
+    //     conf.corner_radius + "px",
+    //     conf.tray.width + "px",
+    //     conf.tray.clock.width + "px",
 
-    for (let i = 0; i < vars.length; i++)
-    {
-        let vr = vars[i];
-        let vl = vals[i];
+    //     conf.colors.background,
+    //     cols.accent
+    // ];
 
-        let prop = `--taskbar-${vr}: ${vl};\n\n`;
-        tbstyle.innerText += prop;
-    };
-    tbstyle.innerText += "}";
+    // for (let i = 0; i < vars.length; i++)
+    // {
+    //     let vr = vars[i];
+    //     let vl = vals[i];
 
-    document.head.appendChild(tbstyle);
+    //     let prop = `--taskbar-${vr}: ${vl};\n\n`;
+    //     tbstyle.innerText += prop;
+    // };
+    // tbstyle.innerText += "}";
+
+    // document.head.appendChild(tbstyle);
 
     clock_fn();
 

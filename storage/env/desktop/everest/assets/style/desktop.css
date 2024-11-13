@@ -31,6 +31,17 @@
   font-family: main;
   color: var(--desktop-color-text);
 }
+*::-webkit-scrollbar {
+  opacity: 1;
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
 
 #_loading {
   position: absolute;
@@ -51,4 +62,30 @@
   transform: translate(-50%, -50%);
   width: 256px;
   height: 256px;
+}
+
+#e_contextMenu {
+  position: fixed;
+  padding: 8px;
+  min-width: 128px;
+  background-color: var(--colors-panel-bg);
+  border: 1px var(--colors-accent) solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+}
+#e_contextMenu > button {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  line-height: 32px;
+  transition: 50ms ease-in-out;
+}
+#e_contextMenu > button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--colors-text-hover);
+}
+#e_contextMenu.hidden {
+  display: none;
 }

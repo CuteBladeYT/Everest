@@ -10,9 +10,7 @@ var domroot = window.everest.root;
 export function _set_domroot(e){domroot=e}
 
 export function get_element(element="")
-{
-    console.log(domroot);
-    
+{   
     if (domroot)
     {
         let e = domroot.body.querySelector(element);

@@ -6,13 +6,14 @@ export var cfg =
     {
         "wallpaper":
         {
-            "src": "./assets/images/wallpaper.png"
+            "src": "./assets/images/supra.jfif"
         },
         "taskbar":
         {
             "height": 52,
             "border_width": 1,
             "corner_radius": 10,
+            "margin": 8,
 
             "colors":
             {
@@ -44,7 +45,19 @@ export var cfg =
     "colors":
     {
         "accent": "#a6e3a1",
-        "text": "#cdd6f4"
+        "text": "#cdd6f4",
+        "text_hover": "#fab387",
+        "panel":
+        {
+            "bg": "#1e1e2e",
+            "bg_dark": "#181825",
+            "bg_darker": "#11111b"
+        },
+        "info":
+        {
+            "warning": "#f9e2af",
+            "error": "#f38ba8"
+        }
     }
 }
 export const defcfg = Object.create(cfg);
@@ -64,8 +77,8 @@ export function load_cfg(apply=false)
 {
     if (fs.exists(cfgFile))
     {
-        let fc = fs.readFile(cfgFile);
-        cfg = JSON.parse(fc);
+        // let fc = fs.readFile(cfgFile);
+        // cfg = JSON.parse(fc);
     }
     else {
         save_cfg();

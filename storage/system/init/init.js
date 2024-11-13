@@ -18,9 +18,6 @@ ipcRenderer.on("everest_init",
     window.everest = vars;
     window.everest.root = document;
 
-    console.log(window.everest.root);
-    
-
     dom._set_domroot(window.everest.root);
 
     init_();
