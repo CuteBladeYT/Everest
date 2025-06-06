@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ES6",
+        "noImplicitAny": false,
+        "removeComments": false,
+        "preserveConstEnums": false,
+        "sourceMap": false,
+        "lib": [
+            "ES6",
+            "DOM"
+        ],
+        "skipLibCheck": true,
+        "alwaysStrict": false,
+        "strict": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "strictNullChecks": false,
+        "allowUnusedLabels": true,
+        "noPropertyAccessFromIndexSignature": false,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "skipDefaultLibCheck": true
+    },
+    "ts-node": {
+        "esm": true
+    },
+    "include": [
+        "static/**/*",
+        "./index.ts"
+    ],
+    "exclude": [
+        "**/*.spec.ts",
+        "node_modules"
+    ]
+}
