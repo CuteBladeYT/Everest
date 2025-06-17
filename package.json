@@ -4,15 +4,18 @@
   "description": "Pseudo-operating system",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "remote": "electron . --remote"
   },
   "keywords": [],
   "author": "UnitedCatdom",
   "license": "DSMS-v1.2",
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "electron": "^19.0.8"
+  },
   "dependencies": {
     "express": "^4.18.1",
-    "http": "0.0.1-security",
-    "socket.io": "^4.5.0"
+    "http": "0.0.1-security"
   }
 }

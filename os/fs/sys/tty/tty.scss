@@ -1,0 +1,85 @@
+*
+{
+    font-family: monospace;
+}
+body
+{
+    background-color: transparent;
+    color: #fff;
+
+    > div#history
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto auto;
+        contain: content;
+
+        > div.list
+        {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 0px;
+
+            > *
+            {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                min-width: 100%;
+                flex-grow: 1;
+            }
+        }
+
+        > div.cmdIn
+        {
+            position: relative;
+            width: 100%;
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 4px;
+
+            padding: 0;
+            margin: 0;
+
+            > span
+            {
+                position: relative;
+                margin: 0;
+                padding: 0;
+                flex-grow: 0;
+            }
+            > input#cmdIn
+            {
+                position: relative;
+                background: none;
+                color: inherit;
+                border: none;
+                flex-grow: 1;
+                
+    
+                margin: 0;
+                padding: 0;
+    
+                &:focus
+                {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

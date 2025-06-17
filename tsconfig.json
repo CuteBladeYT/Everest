@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "ES6",
+        "module": "commonjs",
+        "target": "es6",
         "noImplicitAny": false,
         "removeComments": false,
         "preserveConstEnums": false,
@@ -20,14 +20,16 @@
         "noPropertyAccessFromIndexSignature": false,
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
-        "skipDefaultLibCheck": true
+        "skipDefaultLibCheck": true,
+        "resolveJsonModule": true,
     },
     "ts-node": {
         "esm": true
     },
     "include": [
-        "static/**/*",
-        "./index.ts"
+        "os/**/*",
+        "./index.ts",
+        "./preload.ts"
     ],
     "exclude": [
         "**/*.spec.ts",
